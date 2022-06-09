@@ -1,15 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div v-if="loggedIn">
+    <Player/>
+  </div>
+  <div v-else>
+    <Login/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Player from './components/Player.vue'
+import Login from './components/Login.vue'
 
 export default {
+  data(){
+    return{
+      loggedIn: false,
+    }
+  },
+  methods:{
+    getStuff(){
+
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    Player,
+    Login
   }
 }
 </script>
@@ -22,5 +38,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body{
+  margin: 0 0 0 0;
+  width:100%;
+  height:100%;
 }
 </style>
