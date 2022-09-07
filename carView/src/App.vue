@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div>
+      <h1>Welcome in spotify car view</h1>
+    </div>
     <router-view/>
   </div>
 </template>
